@@ -2,175 +2,344 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>一博的CD</title>
-		<link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<link rel="icon"  href="images/icon.png"/>
-
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/all.min.css"/>
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+		
 	</head>
 	<body>
-		<!-- 背景——《散落的CD》 -->
-		<div id="bg" style="position:fixed;top:350px;left:0;width:100%;height:100%;z-index:0;">
-			<ul id="wang"></ul>
-		</div>
+		<!-- header section starts -->
+		<header>
+			<a class="logo" href="#">LOGO</a>
+			<div id="menu-bar" class="fas fa-bars"></div>
+			<nav class="navbar">
+				<a href="#home">Home</a>
+				<a href="#features">Features</a>
+				<a href="#about">About</a>
+				<a href="#usage">Usage</a>
+				<a href="#review">Review</a>
+				<a href="#pricing">Pricing</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+		<!-- header section ends -->
+		<!-- home section starts -->
 		
-		<!-- Swiper -->
-		<div class="swiper-container mySwiper">
-		  <div class="swiper-wrapper">
-			<div class="swiper-slide">
-			  <img src="images/1.jpg" datasrc="musics/wugan.mp3" title="无感 - 王一博" index="0"/>
+		<section class="home" id="home">
+			<div class="content">
+				<h3>App Landing Page</h3>
+				<p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!</p>
+				 <a href="#" class="btn">get started</a>
 			</div>
-			<div class="swiper-slide" >
-			  <img src="images/2.jpg" datasrc="musics/fire.flac" title="Fire - 王一博" index="1"/>
+			<!--  轮播效果 -->
+			 <div class="swiper-container image-slider">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="images/shot-01.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="images/shot-02.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="images/shot-03.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="images/shot-04.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="images/shot-05.jpg" alt=""></div>
+			    </div>
 			</div>
-			<div class="swiper-slide">
-			  <img src="images/3.jpg" datasrc="musics/lucky.mp3" title="Lucky - 王一博" index="2"/>
-			</div>
-			<div class="swiper-slide">
-			  <img src="images/4.jpg" datasrc="musics/shouze.mp3" title="我的世界守则 - 王一博" index="3"/>
-			</div>
-			<div class="swiper-slide">
-			  <img src="images/5.jpg" datasrc="musics/xinshi.mp3" title="年少心事 - 王一博" index="4"/>
-			</div>
-			<div class="swiper-slide">
-			  <img src="images/6.jpg" datasrc="musics/xiwei.mp3" title="熹微 - 王一博" index="5"/>
-			</div>
-			<div class="swiper-slide">
-			  <img src="images/7.jpg" datasrc="musics/zaiyiqi.mp3" title="因为我们在一起 - 王一博" index="6"/>
-			</div>
-			<div class="swiper-slide">
-			  <img src="images/8.jpg" datasrc="musics/justdance.mp3" title="Just Dance - 王一博" index="7"/>
-			</div>
-			<div class="swiper-slide">
-			  <img src="images/9.jpg" datasrc="musics/chulian.mp3" title="二次初恋 - 王一博" index="8"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/10.jpg" datasrc="musics/mami.mp3" title="给妈咪 - 王一博" index="9"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/11.jpg" datasrc="musics/qialaishi.mp3" title="青春恰来时 - 王一博" index="10"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/12.jpg" datasrc="musics/kongtou.mp3" title="空投计划 - 王一博" index="11"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/13.jpg" datasrc="musics/wuji.mp3" title="无羁 - 王一博" index="12"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/14.jpg" datasrc="musics/buwang.mp3" title="不忘 - 王一博" index="13"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/15.jpg" datasrc="musics/maoxian.mp3" title="最燃的冒险 - 王一博" index="13"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/16.jpg" datasrc="musics/shuojian.mp3" title="说剑 - 王一博" index="13"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/17.jpg" datasrc="musics/rexue.mp3" title="热血今朝 - 王一博" index="13"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/18.jpg" datasrc="musics/muyang.mp3" title="青春的模样 - 王一博" index="13"/>
-			</div>
-			<div class="swiper-slide">
-				<img src="images/19.jpg" datasrc="musics/xiaoxingyun.mp3" title="小幸运 - 王一博" index="13"/>
-			</div>
-		  </div>
-		  <div class="swiper-pagination"></div>
-		</div>
-		
-		<!-- 切换背景按钮 -->
-		<a href="#" id="qiehuan"><img src="images/color.png" ></a>   
+			<!--轮播效果  -->
+		</section>
+		<!-- home section ends -->
 		
 		
-		<!-- 唱片机 -->
-		<div class="turntable">
-			<img class="record" src="images/1.jpg">	
-			<div class="overlay">
-				<div class="inner"></div>
+		<!-- features section starts -->
+		
+		
+		<section class="features" id="features">
+		
+		    <h1 class="heading">app features</h1>
+		
+		    <div class="box-container">
+		
+		        <div class="box">
+		            <i class="fas fa-magic"></i>
+		            <h3>smooth design</h3>
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque.
+					 Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+		        </div>
+		        <div class="box">
+		            <i class="fas fa-shield-alt"></i>
+		            <h3>privacy protect</h3>
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque.
+					 Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+		        </div>
+		        <div class="box">
+		            <i class="fas fa-globe"></i>
+		            <h3>multiple language</h3>
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. 
+					Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+		        </div>
+		        <div class="box">
+		            <i class="fas fa-map-marker-alt"></i>
+		            <h3>location tracking</h3>
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. 
+					Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+		        </div>
+		        <div class="box">
+		            <i class="fas fa-cogs"></i>
+		            <h3>powerfull settings</h3>
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque.
+					 Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+		        </div>
+		        <div class="box">
+		            <i class="fas fa-headset"></i>
+		            <h3>24 x 7 service</h3>
+		            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque enim ad neque. 
+					Voluptatem alias beatae accusamus laudantium nisi assumenda libero.</p>
+		        </div>
+		
+		    </div>
+		
+		</section>
+		
+		<!-- features section ends -->
+		
+		<!-- about section starts -->
+		
+		<section class="about" id="about">
+			<h1 class="heading">about the app</h1>
+			<div class="row">
+				<div class="image">
+					<img src="images/about-img.png" >
+				</div>
+				
+				<div class="content">
+					<h3>Take a Look Around our App</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus labore perspiciatis iusto debitis, explicabo neque earum accusamus adipisci eius, nobis laboriosam, autem modi porro quisquam saepe assumenda fuga quod ipsa!</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit rerum excepturi alias quas voluptatibus provident voluptatum sapiente quos enim praesentium?</p>
+					<div class="buttons">
+						<a href="#"><img src="images/google-btn.png" ></a>
+						<a href="#"><img src="images/app-store-btn.png" ></a>
+					</div>
+				</div>
+				
 			</div>
 			
-			<div class="arm-holder">
-				<div class="arm"></div>
+		</section>
+		<!-- about section ends -->
+		
+		
+		<!-- usage section starts -->
+		<section class="usage" id="usage">
+			<h1 class="heading">How it works?</h1>
+			<div class="row">
+				<div class="box-container">
+					<div class="box">
+					    <i class="fas fa-sort-amount-down"></i>
+					    <h3>minimum progress</h3>
+					    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+					</div>
+					<div class="box">
+					    <i class="fas fa-user-clock"></i>
+					    <h3>active time</h3>
+					    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+					</div>
+				</div>
+				
+				<img class="divider" src="images/usage-img.png" >
+				
+				<div class="box-container">
+				    <div class="box">
+				        <i class="fas fa-sort-amount-up"></i>
+				        <h3>maximum progress</h3>
+				        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+				    </div>
+				    <div class="box">
+				        <i class="fas fa-fire"></i>
+				        <h3>calories burned</h3>
+				        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem dolor nihil dicta eveniet quam nam explicabo, natus labore quia cupiditate.</p>
+				    </div>
+				</div>
 			</div>
+		</section>
+		<!-- usage section ends -->
+		
+		
+		<!-- review section starts -->
+		<section class="review" id="review">
+			<h1 class="heading">customers review</h1>
 			
-			<div class="dial">
-				<img  src="images/play.png" class="m_play" >
+			<div class="box-container">
+			    <div class="box">
+			        <img src="images/pic1.png" alt="">
+			        <h3>john deo</h3>
+			        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem fugit corporis consectetur reprehenderit officia earum, voluptate adipisci facere ea est!</p>
+			        <div class="stars">
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star-half-alt"></i>
+			        </div>
+			    </div>
+			    <div class="box">
+			        <img src="images/pic2.png" alt="">
+			        <h3>john deo</h3>
+			        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem fugit corporis consectetur reprehenderit officia earum, voluptate adipisci facere ea est!</p>
+			        <div class="stars">
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			        </div>
+			    </div>
+			    <div class="box">
+			        <img src="images/pic3.png" alt="">
+			        <h3>john deo</h3>
+			        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem fugit corporis consectetur reprehenderit officia earum, voluptate adipisci facere ea est!</p>
+			        <div class="stars">
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="fas fa-star"></i>
+			            <i class="far fa-star"></i>
+			        </div>
+			    </div>
 			</div>
-			<audio src="musics/wugan.mp3" title=" - 王一博" index="" class="m_mp3" title=" - 王一博" index="" loop="loop">
-				当前浏览器不支持audio
-			</audio>
-		</div>
-	
-
-
-
-
-
-
-
-
-
-
-
-		<!-- Swiper JS -->
-		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<script src="js/jquery-3.6.0.min.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" src="js/index.js"></script>
+		</section>
+		<!-- review section ends -->
 		
-
-		<!-- Initialize Swiper -->
-		<script>
-		  var swiper = new Swiper(".mySwiper", {
-			effect: "coverflow",
-			grabCursor: true,
-			centeredSlides: true,
-			slidesPerView: "auto",
-			coverflowEffect: {
-			  rotate: 50,
-			  stretch: 0,
-			  depth: 100,
-			  modifier: 1,
-			  slideShadows: true,
-			},
-			pagination: {
-			  el: ".swiper-pagination",
-			},
-		  });
-		</script>
 		
-		<!-- 背景功能 -->
+		<!-- pricing section starts -->
+		<section class="pricing" id="pricing">
+			<h1 class="heading">our pricing plans</h1>
+			
+			<div class="box-container">
+			    <div class="box">
+			        <div class="price"><span>$</span>10<span>/month</span></div>
+			        <h3>basic</h3>
+			        <ul>
+			            <li>100 MB Disk Space</li>
+			            <li>2 Subdomains</li>
+			            <li>5 Email Accounts</li>
+			            <li>email support</li>
+			        </ul>
+			        <a href="#" class="btn">select plan</a>
+			    </div>
+			    <div class="box">
+			        <div class="price"><span>$</span>20<span>/month</span></div>
+			        <h3>standard</h3>
+			        <ul>
+			            <li>100 MB Disk Space</li>
+			            <li>2 Subdomains</li>
+			            <li>5 Email Accounts</li>
+			            <li>email support</li>
+			        </ul>
+			        <a href="#" class="btn">select plan</a>
+			    </div>
+			    <div class="box">
+			        <div class="price"><span>$</span>50<span>/month</span></div>
+			        <h3>premium</h3>
+			        <ul>
+			            <li>100 MB Disk Space</li>
+			            <li>2 Subdomains</li>
+			            <li>5 Email Accounts</li>
+			            <li>email support</li>
+			        </ul>
+			        <a href="#" class="btn">select plan</a>
+			    </div>
+			</div>
+		</section>
+		<!-- pricing section ends -->
+		
+		<!-- contact section starts -->
+		<section class="contact" id="contact">
+			<h1 class="heading">get in touch</h1>
+			
+			<form action="">
+			
+			    <div class="inputBox">
+			        <input type="text" required>
+			        <label>name</label>
+			    </div>
+			    <div class="inputBox">
+			        <input type="email" required>
+			        <label>email</label>
+			    </div>
+			    <div class="inputBox">
+			        <input type="number" required>
+			        <label>number</label>
+			    </div>
+			    <div class="inputBox">
+			        <textarea required name="" id="" cols="30" rows="10"></textarea>
+			        <label>message</label>
+			    </div>
+			
+			    <input type="submit" class="btn" value="send message">
+			
+			</form>
+		</section>
+		<!-- contact section ends -->
+		
+		<!-- footer section starts  -->
+		<section class="footer">
+			<div class="share">
+				<h1 class="credit"> created by <span> mr. web designer </span> | all rights reserved! </h1>
+			</div>
+		</section>
+		<!-- footer section  ends  -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<!-- script part -->
+		<script src="js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script type="text/javascript">
 			
-			window.addEventListener('load',function(){
-				var ul=document.getElementById('wang');
-				var w =document.documentElement.clientWidth-400;
-				var h =document.documentElement.clientHeight-200;
-				var arr=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg']
-				for(var i=0;i<arr.length;i++){
-					var li=document.createElement('li');
-					var img=document.createElement('img');
-					img.setAttribute('src','images/'+arr[i]);
-					li.appendChild(img);
-					
-					li.style.left=parseInt(Math.random()*w)+"px";
-					li.style.top=parseInt(Math.random()*h)+"px";
-					li.style.transform='rotate('+Math.random()*360+'deg)';
-					
-					li.addEventListener('click',function(){
-						normal();
-						this.className = 'checked';
-					})
-					ul.appendChild(li);
-				}
-				function normal(){
-					var lis=ul.children;
-					for(var i=0;i<lis.length;i++){
-						lis[i].className='';
-					}
-				}
-			 })
-		
-		
+			var swiper = new Swiper(".image-slider", {
+			    effect: "coverflow",
+			    grabCursor: true,
+			    centeredSlides: true,
+			    slidesPerView: "auto",
+			    coverflowEffect: {
+			        rotate: 0,
+			        stretch: 0,
+			        depth: 100,
+			        modifier: 2,
+			        slideShadows: true,
+			    },
+			    loop:true,
+			    autoplay: {
+			          delay: 2000,
+			          disableOnInteraction: false,
+			    },
+			});    
+			
+			
+			let menu=document.querySelector('#menu-bar');
+			let navbar=document.querySelector('#navbar');
+			menu.addEventListener('click',()=>{
+				menu.classList.toggle('fa-times');
+				navbar.classList.toggle('nav-toggle');
+			})
+			
+			window.onscroll=()=>{
+				menu.classList.remove('fa-times');
+				navbar.classList.remove('nav-toggle');
+			}
+			
 		</script>
+
 	</body>
+		
 </html>
