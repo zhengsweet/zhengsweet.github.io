@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>视差滚动效果</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header>
+			<a href="#" class="logo">logo</a>
+			<ul>
+				<li><a href="#" class="active">home</a></li>
+				<li><a href="#">about</a></li>
+				<li><a href="#">work</a></li>
+				<li><a href="#">contact</a></li>
+			</ul>
+		</header>
+		<section>
+			<img src="images/stars.png" id="stars">
+			<img src="images/moon.png" id="moon">	
+			<img src="images/mountains_behind.png" id="mountains_behind" >
+			<h2 id="text">Moon Light</h2>
+			<a href="#sec" id="btn">Explore</a>
+			<img src="images/mountains_front.png" id="mountains_front" >
+		</section>
+		<div class="sec" id="sec">
+			<h2>App Landing Page</h2>
+			<p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam! <br><br>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam! <br><br>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!<br><br>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!<br><br>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Minima Labore Similique Eos
+				 Harum Atque Omnis Ex Consectetur, Assumenda Sunt Ad Facilis Illum Quaerat Doloremque. 
+				 Aut Eveniet Culpa Enim Suscipit Ullam!</p>
+		</div>
+		
+		<script type="text/javascript">
+			let stars=document.getElementById('stars');
+			let moon=document.getElementById('moon');
+			let mountains_behind=document.getElementById('mountains_behind');
+			let text=document.getElementById('text');
+			let btn=document.getElementById('btn');
+			let mountains_front=document.getElementById('mountains_front');
+			let header=document.querySelector('header');
+			
+			window.addEventListener('scroll',function(){
+				let value =window.scrollY;
+				stars.style.left=value*0.25 +'px';
+				moon.style.top=value*1.25 +'px';
+				mountains_behind.style.top=value*0.5 +'px';
+				mountains_front.style.top=value*0 +'px';
+				text.style.marginRight=value*4 +'px';
+				text.style.marginTop=value*1.5 +'px';
+				btn.style.marginTop=value*1.5 +'px';
+				header.style.top = value*0.5 +'px';
+				
+			})
+		</script>
+	</body>
+</html>
