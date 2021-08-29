@@ -1,0 +1,183 @@
+body,div,h1,h3,p{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+body{
+	background:#D0EFF7;
+	color: black;
+	
+	letter-spacing: 2px;
+	/* font-family:'GoodVibrationsROB'; */
+	min-height: 100vh;
+	overflow: hidden;
+	scroll-behavior:smooth;
+}
+audio{
+	position: absolute;
+	top: 0;
+}
+/* body:before{
+	content: '';
+	position: absolute;
+	z-index: 0;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 100px;
+	background: #D0EFF7;
+} */
+h1{
+
+	z-index: 2;
+	margin-bottom: 1.25rem;
+	text-align: center;
+	font-size: 35px;
+	font-family:'ChannelSlanted2';
+	/* color: white; */
+}
+h3{
+	color: #283A94;
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+
+#content{
+	/* border: 0.125rem solid red; */
+	font-size: 1rem;
+	overflow: hidden;
+	height: 27.9375rem;
+	position: relative;
+	top: 0;
+	transition: all 1s ease-in-out .3s;
+	font-family:'HoangYen11';
+}
+
+#content:before{
+	content: '';
+	position: absolute;
+	bottom: 128px;
+	left: 0;
+	background: url(../images/before.png);
+	width: 33.125rem;
+	height: 19.8125rem;
+}
+
+#content:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: url(../images/after.png);
+	width: 33.125rem;
+	height: 16.1875rem;
+}
+#wrap{
+	/* border: 3px solid green; */
+	width: 33.125rem;
+	margin: 1.25rem auto 0;
+	height: 62.5rem;
+}
+
+/* #content.hide:after,
+#content.hide:before{
+	display: none;
+} */
+
+#content:hover{
+	height: 48.5625rem;
+	/* 因为伪元素与content的bottom距离关联，所以height变大，伪元素跟着往下走 */
+	top: -200px;
+	/* 如果不设置这个，效果则为，信封往下走，而不是信纸往上走！！！ */
+	/* content为relative，所以设置为-200，意思就是在原本与top的距离之上，近了200 */
+	/* content的没有相邻元素，其父元素也未定位，所以他其实是相对于自己？？？ */
+}
+
+form{
+	background: white;
+	position: relative;
+	/* 父元素与子元素都是relative */
+	top: 200px;
+	overflow: hidden;
+	height: 200px ;
+	width: 400px ;
+	margin: 0px auto;
+	padding: 20px ;
+	border: 1px solid white;
+	border-right: 3px ;
+	transition:   all 1s ease-in-out .3s ;
+}
+
+#content:hover form{
+	height: 530px ;
+	/* 信纸被鼠标hover之后，content变长，同时form也变长 */
+	
+}
+
+#me{
+	display: block;
+	text-align: right;
+}
+
+#btn_enjoy{
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	background: #283A94;
+	padding: 10px 10px;
+	color: white;
+	border-radius: 50px;
+	font-family: sans-serif;
+	margin: 30px auto;
+	display: none;
+	/* transition:   all 1s ease-in-out .3s ; */
+}
+
+
+
+/* page2 */
+#page2{
+	padding-top: 50px;
+	background: #D0EFF7;
+	width: 100%;
+	height: 100vh;
+}
+
+
+
+
+
+/*  */
+/* #page2 #left{
+	width: 50%;
+	height: 100vh;
+} */
+.swiper{
+	margin-top: 50px;
+}
+.swiper ,
+.swiper-wrapper img{
+        width: 240px;
+        height: 320px;
+      }
+
+.swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 18px;
+
+}
+
+
+
+
+
+
+/*  */
+
+
+
