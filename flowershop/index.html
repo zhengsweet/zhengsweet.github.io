@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Flower Shop</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	</head>
+	<body>
+		<!-- header section starts -->
+		<header>
+			
+			<input type="checkbox" name="" id="toggler" value="" />
+			<label for="toggler" class="fas fa-bars"></label>
+			<!-- label的for的作用，点击label标签，就会选中checkbox -->
+			
+			<a href="#" class="logo">flower <span>.</span> </a>
+			
+			<nav class="navbar">
+				<a href="#home">home</a>
+				<a href="#about">about</a>
+				<a href="#products">products</a>
+				<a href="#review">review</a>
+				<a href="contact">contact</a>
+			</nav>
+			
+			<div class="icons">
+				<a href="#" class="fas fa-heart"></a>
+				<a href="#" class="fas fa-shopping-cart"></a>
+				<a href="#" class="fas fa-user"></a>
+
+			</div>
+		</header>
+		<!-- header section ends -->
+	
+		<!-- home section starts -->
+		
+		<section class="home" id="home">
+			<div class="content">
+				<h3>fresh flowers</h3>
+				<span>Natural & Beautiful Flowers</span>
+				<p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
+				 Beatae Laborum Ut Minus Corrupti Dolorum Dolore Assumenda 
+				 Iste Voluptate Dolorem Pariatur.</p>
+				 <!-- 这里即使截断了，页面上仍是没断的 -->
+				 <a href="#" class="btn">shop now</a>
+			</div>
+		</section>
+		<!-- home section ends -->
+		
+		
+		
+		<!-- about section starts -->
+		<section class="about" id="about">
+			<!-- 此处的section，继承home时设置的左右内边距9% ，和上下2rem-->
+			<h1 class="heading"><span>about</span> us </h1>
+		<!-- 因为下面每个板块，都有和about us类似的标题，所以设置类名为 heading -->
+			<div class="row">
+				<div class="video-container">
+					<video src="images/about-vid.mp4" loop="loop" autoplay="autoplay" muted="muted">
+						<!-- muted="muted"静音 -->
+					</video>
+					<h3>best flower sellers</h3>
+				</div>
+				
+				<div class="content">
+					<!-- 此处虽然和home的content重名，但没关系，因为写css时，
+					给home加了前缀，header -->
+					<h3>Why Choose Us?</h3>
+					<p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. 
+					Rem Cumque Sit Nemo Pariatur Corporis Perspiciatis Aspernatur
+					 A Ullam Repudiandae Autem Asperiores Quibusdam Omnis Commodi 
+					 Alias Repellat Illum, Unde Optio Temporibus.</p>
+					 <p>Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit.
+					  Accusantium Ea Est Commodi
+					  Incidunt Magni Quia Molestias Perspiciatis, Unde Repudiandae Quidem.</p>
+					  <a href="#" class="btn">learn more</a>
+				</div>
+			</div>
+		</section>
+		<!-- about section ends -->
+		
+		<!-- icons section starts -->
+		
+		<section class="icons-container">
+			<div class="icons">
+			    <img src="images/icon-1.png" alt="">
+			    <div class="info">
+			        <h3>free delivery</h3>
+			        <span>on all orders</span>
+			    </div>
+			</div>
+			
+			<div class="icons">
+			    <img src="images/icon-2.png" alt="">
+			    <div class="info">
+			        <h3>10 days returns</h3>
+			        <span>moneyback guarantee</span>
+			    </div>
+			</div>
+			
+			<div class="icons">
+			    <img src="images/icon-3.png" alt="">
+			    <div class="info">
+			        <h3>offer & gifts</h3>
+			        <span>on all orders</span>
+			    </div>
+			</div>
+			
+			<div class="icons">
+			    <img src="images/icon-4.png" alt="">
+			    <div class="info">
+			        <h3>secure paymens</h3>
+			        <span>protected by paypal</span>
+			    </div>
+			</div>
+		</section>
+		<!-- icons section ends -->
+		
+		<!-- products section starts -->
+		<section class="products" id="products">
+			<h1 class="heading">latest <span>products</span> </h1>
+			<div class="box-container">
+				<div class="box">
+					<!-- yi -->
+					<span class="discount">-10%</span>
+					<!-- er -->
+					<div class="image">
+						<img src="images/img-1.jpg" >
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<!-- san -->
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				
+				<!--  -->
+				
+				<div class="box">
+					<span class="discount">-15%</span>
+					<div class="image">
+						<img src="images/img-2.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				<div class="box">
+					<span class="discount">-5%</span>
+					<div class="image">
+						<img src="images/img-3.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				<div class="box">
+					<span class="discount">-20%</span>
+					<div class="image">
+						<img src="images/img-4.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+			
+				<div class="box">
+					<span class="discount">-17%</span>
+					<div class="image">
+						<img src="images/img-5.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				<div class="box">
+					<span class="discount">-3%</span>
+					<div class="image">
+						<img src="images/img-6.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				<div class="box">
+					<span class="discount">-18%</span>
+					<div class="image">
+						<img src="images/img-7.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				<div class="box">
+					<span class="discount">-10%</span>
+					<div class="image">
+						<img src="images/img-8.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				<div class="box">
+					<span class="discount">-5%</span>
+					<div class="image">
+						<img src="images/img-9.jpg" alt="">
+						<div class="icons">
+							<a href="#" class="fas fa-heart"></a>
+							<a href="#" class="cart-btn">add to cart</a>
+							<a href="#" class="fas fa-share"></a>
+						</div>
+					</div>
+					<div class="content">
+						<h3>flower pot</h3>
+						<div class="price"> $12.99 <span>$15.99</span> </div>
+					</div>
+				</div>
+				
+				<!--  -->
+			</div>
+		</section>
+		<!-- products section ends -->
+		
+		
+		
+		
+		<!-- review section starts -->
+		<section class="review" id="review">
+			<h1 class="heading">customer's <span>review</span> </h1>
+			<div class="box-container">
+				<div class="box">
+					<!-- yi -->
+					<div class="stars">
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<i class="fas fa-star"></i>
+						<!-- 因为短
+						<i>标签只是样式标签和语义关系不大
+						语义化只是建议不是强制性要求
+						当然也可以用<span>之类的但是显然<i>更短，因为很重要所以要说两遍 -->
+					</div>
+					<!-- er -->
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+					<!-- san -->
+					<div class="user">
+						<img src="images/pic-1.png" >
+						<div class="user-info">
+							<h3>john deo</h3>
+							<span>happy customer</span>
+						</div>
+					</div>
+					<!-- si -->
+					<span class="fas fa-quote-right"></span>
+				</div>
+				<!--  -->
+				<div class="box">
+				    <div class="stars">
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				    </div>
+				    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+				    <div class="user">
+				        <img src="images/pic-2.png" alt="">
+				        <div class="user-info">
+				            <h3>john deo</h3>
+				            <span>happy customer</span>
+				        </div>
+				    </div>
+				    <span class="fas fa-quote-right"></span>
+				</div>
+				
+				<div class="box">
+				    <div class="stars">
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				        <i class="fas fa-star"></i>
+				    </div>
+				    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores laboriosam praesentium enim maiores? Ad repellat voluptates alias facere repudiandae dolor accusamus enim ut odit, aliquam nesciunt eaque nulla dignissimos.</p>
+				    <div class="user">
+				        <img src="images/pic-3.png" alt="">
+				        <div class="user-info">
+				            <h3>john deo</h3>
+				            <span>happy customer</span>
+				        </div>
+				    </div>
+				    <span class="fas fa-quote-right"></span>
+				</div>
+				<!--  -->
+				
+				
+			</div> 
+		</section>
+		<!-- review section ends -->
+		
+		 <!-- contact section starts -->
+		 <section class="contact" id="contact">
+			 <h1 class="heading"> <span> contact </span> us</h1>
+			 <!-- 哪一部分出现在nav上,哪一部分就用span -->
+			 <div class="row">
+				 <form action="">
+					 <input type="text" placeholder="name" class="box" />
+					 <input type="email" placeholder="email" class="box" />
+					 <input type="tel" placeholder="telephone" class="box" />
+					 <textarea rows="10" cols="30" class="box" placeholder="message">
+						
+					 </textarea>
+					 <input type="submit" id="" name="" class="btn" value="send message" />
+				 </form>
+				 
+				 <div class="image">
+					 <img src="images/contact-img.svg" >
+				 </div>
+			 </div>
+		 </section>
+		 <!-- contact section ends -->
+		
+		
+		<!-- footer section starts -->
+		<section class="footer">
+			<!-- 为什么不用<footer>,像<header>那样?因为我这个footer,也需要内边距(9%)? -->
+			<div class="box-container">
+				<div class="box">
+				    <h3>quick links</h3>
+				    <a href="#">home</a>
+				    <a href="#">about</a>
+				    <a href="#">products</a>
+				    <a href="#">review</a>
+				    <a href="#">contact</a>
+				</div>
+				
+				<div class="box">
+				    <h3>extra links</h3>
+				    <a href="#">my account</a>
+				    <a href="#">my order</a>
+				    <a href="#">my favorite</a>
+				</div>
+				
+				<div class="box">
+				    <h3>locations</h3>
+				    <a href="#">india</a>
+				    <a href="#">USA</a>
+				    <a href="#">japan</a>
+				    <a href="#">france</a>
+				</div>
+				
+				<div class="box">
+				    <h3>contact info</h3>
+				    <a href="#">+123-456-7890</a>
+				    <a href="#">example@gmail.com</a>
+				    <a href="#">mumbai, india - 400104</a>
+				    <img src="images/payment.png" alt="">
+				</div>
+			</div>
+			
+			<div class="credit"> created by <span> mr. web designer </span> | all rights reserved </div>
+		</section>
+		<!-- footer section ends -->
+
+		
+		
+		
+	</body>
+</html>

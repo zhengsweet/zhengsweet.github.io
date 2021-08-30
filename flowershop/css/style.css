@@ -1,0 +1,719 @@
+:root{
+	--pink:#e84393;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/*content-box  是默认值。
+	如果你设置一个元素的宽为100px，那么这个元素的内容区会有100px宽，
+	并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。
+    border-box 告诉浏览器去理解你设置的边框和内边距的值是包含在width内的。
+	也就是说，如果你将一个元素的width设为100px,
+	那么这100px会包含其它的border和padding，
+	内容区的实际宽度会是width减去border + padding的计算值。
+    大多数情况下这使得我们更容易的去设定一个元素的宽高。  */
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	outline: none; border:none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: .2s linear;
+	/* 通配符一般用来清楚默认设置？ */
+}
+
+html{
+	font-size: 62.5%;
+	/* 字体大小设置一般写在html中？？？ */
+	scroll-behavior:smooth;
+	/* @@@ */
+	/* scroll-padding-top:6rem; */
+	overflow-x: hidden;
+	/* 水平方向溢出则隐藏 */
+}
+
+section{
+	padding: 2rem 9%;
+	/* ②此处设9%，是与①同步，因为①的内边距也是9% */
+	/* section不用来做其他的布局配置 ,因为会有很多布局标签,如果写了,其他板块的section会被影响*/
+}
+.heading{
+	text-align: center;
+	/* text-align: center;应用场景：父盒子设置text-align: center;后，
+	盒子里面的 文字内容、行内元素、行内块元素、 都可以水平居中对齐；
+	而块级元素一般是不可以水平居中的。 */
+	/* .heading其实是h1，h1虽然是块级元素。但是 父盒子设置text-align: center;后，
+	盒子里面的 文字内容可以水平居中对齐；*/
+	font-size: 4rem;
+	color: #333333;
+	padding: 1rem;
+	margin: 2rem 0;
+	/* h1块级元素可以有上下margin */
+	background: rgba(255,51,153,.05);
+}
+.heading span{
+	color: var(--pink);
+}
+/* heading现在这里，是因为属于共同样式，其他板块的heading也取同样样式，
+所以这里也不加前缀 about */
+
+.btn{
+	display: inline-block;
+	/* 因为此按钮是用a标签写的，a标签是行级标签，
+	行级元素padding都生效，但margin上下不生效 
+	为了能使用margin-top，可以将a标签转换为inline-block*/
+	margin-top: 1rem;
+	background: #333333;
+	border-radius: 5rem;
+	color: #FFFFFF;
+	padding: .9rem 3.5rem;
+	cursor: pointer;
+	font-size: 1.7rem;
+}
+.btn:hover{
+	background: var(--pink);
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 2rem 9%;
+	/* 使header脱离文档流 */
+	display: flex;
+	/* 使logo，nav，icon都水平浮动,且会自适应布局 */
+	justify-content: space-between;
+	/* 使logo，nav，icon 分掉header */
+	align-items: center;
+	z-index: 1000;
+	/* 使header一直在最上层 */
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	background: #FFFFFF;
+}
+
+header .logo{
+	font-size: 3rem;
+	color: #333;
+	font-weight: bolder;
+	/* 字体加粗 */
+	
+}
+
+header .logo span{
+	color: var(--pink);
+}
+header .navbar a{
+	font-size: 2rem;
+	padding: 0 1.5rem;
+	color: #666;
+}
+header .navbar a:hover{
+	color: var(--pink);
+}
+
+header .icons a{
+	font-size: 2.5rem;
+	color: #333333;
+	margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+	color: var(--pink);
+}
+
+header #toggler{
+	display: none;
+	/* display:none 之后，就脱离文档流了，不会占位，原本的位置被顶替 */
+}
+
+header .fa-bars{
+	font-size: 3rem;
+	color: #333333;
+	border-radius: .5rem;
+	border: .1rem solid rgba(0,0,0,.3);
+	padding: .5rem 1.5rem;
+	/* 让边框不会贴着 fa-bars */
+	cursor: pointer;
+	display: none;
+}
+
+/* home */
+.home{
+	display: flex;
+	/* 不会浮动成一行？因为h3和p都是块元素，所以连同span也独自一行 */
+	align-items: center;
+	min-height: 100vh;
+	/* 为section设置高度，撑开整个section。同时内容会居中，因为align-items: center; */
+	background: url(../images/home-bg.jpg) no-repeat;
+	/* 为section设置背景，即使是脱离文档流的header，也会受影响,所以header也要设置bg为fff */
+	background-size: cover;
+	background-position: center;
+}
+
+.home .content{
+	max-width: 50rem;
+	/* 设max-width,把这些文字控制在一定宽度的div内，多以p会自动换行*/
+}
+
+.home .content h3{
+	font-size: 6rem;
+	color: #333333;
+}
+
+.home .content span{
+	font-size: 3.5rem;
+	color: var(--pink);
+	padding: 1rem 0;
+	line-height: 1.5;
+	/* 此处1.5和1.5rem不是一个东西 */
+}
+
+.home .content p{
+	font-size: 1.5rem;
+	/* 字体变大之后，一行容不下，自动将p切为两行 */
+	color:#999;
+	padding: 1rem 0;
+	line-height: 1.5;
+}
+
+
+
+
+
+/* ③san about*/
+
+.about .row{
+	display: flex;
+	/* 父容器,作为一个弹性盒子,所以 display: flex; 设给父容器*/
+	align-items: center;
+	/* 让其两个子元素在垂直方向居中对齐 */
+	gap:2rem;
+	flex-wrap: wrap;
+	/* 让弹性盒元素在必要的时候拆行 
+	比如 <div class="video-container"> 和<div class="content">
+	水平位置不够时,拆成两行,就不用在媒体查询时考虑让他么换行了*/
+	padding: 2rem 0;
+	padding-bottom: 3rem;
+	/* border:.1rem solid #E84393; */
+	
+}
+
+.about .row .video-container{
+	flex: 1 1 40rem;
+	/* flex-grow:1 (放大)
+	 flex-shrink:1(空间不足时缩小)
+	 flex-basis:宽度*/
+	 position: relative;
+	 /* 把容器设为relative，其下有两个子元素 ，分别是<video><h3> */
+}
+
+.about .row .video-container video{
+	width: 100%;
+	border: 1.5rem solid #FFFFFF;
+	border-radius: .5rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	/* border: 1.5rem solid #000;
+	border-radius: .5rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	可以做出一个白色边框，且是圆角的，且有阴影*/
+	height: 100%;
+	object-fit: cover;
+}
+.about .row .video-container h3{
+	position: absolute;
+	/* 设置了 position: relative;的父元素是个容器,<div class="video-container"> */
+	top: 50%;
+	/* 把h3定位在视频中间高度,但是这个50%不包括自身的高度,所以还要transform: translateY(-50%);*/
+	transform: translateY(-50%);
+	   /* 让文字沿Y轴平移自身高度的一半 */
+    font-size: 3rem;
+    background: #FFFFFF;
+	/* border:1rem solid #E84393; */
+    width: 100%;
+    /* 字数不够,也不会改变文字大小,背景颜色会去满足宽度为100% */
+    padding: 1rem 2rem;
+    /* 把块元素h3撑开一点 */
+    text-align: center;
+    /*让文字居中,虽然是块级元素,但人家是文字 */
+    mix-blend-mode: screen;
+    /* screen混合模式，国内称为“滤色” */
+}
+
+.about .row .content{
+	flex: 1 1 40rem;
+	/* 因为<div class="video-container">和	<div class="content">
+	 都是<div class="row">这个弹性盒子（display:flex）的项目，且都flex: 1 1 40rem;
+	 所以他们平分了弹性盒子row*/
+	 
+}
+
+.about .row .content h3{
+	font-size: 3rem;
+	color: #333333;
+}
+
+.about .row .content p{
+	font-size: 1.5rem;
+	color: #999999;
+	padding: .5rem 0;
+	padding-top:1rem ;
+	line-height:1.5 ;
+}
+
+/*  */
+.icons-container{
+	/* border: 1rem solid #E84393; */
+	background: #eee;
+	/* 全部都会变成灰色,虽然左右内边距为9%,但是内边距也是在边框里的,也会变成灰色 */
+	display: flex;
+	/* 是因为它能够扩展和收缩 flex 容器内的元素，以最大限度地填充可用空间。 */
+	/* 因而四个div,并成一行 */
+	flex-wrap: wrap;
+	gap:1.5rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+.icons-container .icons{
+	background: #FFFFFF;
+	border: .1rem solid rgba(0,0,0,.1);
+	padding: 2rem;
+	display: flex;
+	/* 则img和info,分成两列 */
+	align-items: center;
+	/* 四个div的img和info都垂直居中 */
+	flex: 1 1 25rem;
+	/* 四个div的宽度则相同 */
+}
+
+.icons-container .icons img{
+	height: 5rem;
+	margin-right: 2rem;
+}
+.icons-container .icons h3{
+	color: #333333;
+	padding-bottom: .5rem;
+	font-size: 1.5rem;
+}
+
+.icons-container .icons span{
+	color: #999;
+	font-size: 1.3rem;
+}
+
+
+
+
+/*products  */
+.products .box-container{
+	display: flex;
+	/* 则全部都在一行,即使溢出了,
+	 也会因为html{overflow-x: hidden;}
+	 而被隐藏*/
+	flex-wrap: wrap;
+	 /* 溢出的部分不再溢出,而是另起一行 */
+	gap: 1.5rem;
+}
+.products .box-container .box{
+	flex: 1 1 30rem;
+	box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+	border-radius: .5rem;
+	border: .1rem solid rgba(0,0,0,.1);
+	position: relative;
+	/* box作为容器,不负责某部分内容,所以设置 position: relative;*/
+}
+
+.products .box-container .box .discount{
+	position: absolute;
+	top: 1rem; left: 1rem;
+	padding: .7rem 1rem;
+	font-size: 2rem;
+	color: var(--pink);
+	background: rgba(255,51,153,.05);
+	z-index: 1;
+	/* 因为一个父元素设置为relative,它的很多子元素都可以设置为 position: absolute;
+	为了避免他们重叠在一起,可设置z-index: 1;*/
+	border-radius: .5rem;
+}
+
+.products .box-container .box .image{
+	position: relative;
+	/* 它作为<img src="images/img-1.jpg" >和<div class="icons">的容器
+	所以也设置为relative*/
+	text-align: center;
+	/* 使得其子元素 图片和文字,都会居中 */
+	 padding-top: 2rem;
+	 overflow: hidden;
+}
+
+.products .box-container .box .image img{
+	height: 25rem;
+}
+
+.products .box-container .box:hover .image img{
+	transform: scale(1.1);
+	/* 鼠标触摸到卡片box的时候,花的图片img放大,而不是整个卡片放大 */
+}
+
+.products .box-container .box .image .icons{
+	position: absolute;
+	/* 脱离文档流,不会被放大的img挡住 */
+	bottom: -7rem;
+	/* 则暂时隐藏icons */
+	left: 0;
+	right: 0;
+	/* 左右距离都设置为0,所以元素的bd,变成width:100%,元素的文字居中 */
+	display: flex;
+	/* 文字居中又变成不居中,全部向左浮动
+	 且高度变成一样的,所以给每个a添加bd,不会高度不一致而翻车
+	 什么原理???把行级元素变成块级元素???*/
+	/* border:0.5rem solid #E84393; */
+}
+
+.products .box-container .box:hover .image .icons{
+	bottom: 0;
+	/* 鼠标触摸到卡片box时,从下面浮出icons */
+}
+
+.products .box-container .box .image .icons a{
+	height: 5rem;
+	/* 图标并没有放大 ,但是父容器被撑高了,固定了高度*/
+	line-height: 5rem;
+	/* 则三个图标垂直居中 */
+	font-size: 2rem;
+	/* 图标放大了 */
+	width: 50%;
+	/* 每个a的宽度都是50%,所以他们将<div class="icons"> 平均分了
+	 作用有点类似 flex:1 1 ;*/
+	background: var(--pink);
+	color: #FFFFFF;
+}
+
+
+.products .box-container .box .image .icons  .cart-btn{
+	border-left: .1rem solid #fff7;
+	border-right: .1rem solid #fff7;
+	width: 100%;
+	/* 则三个a标签的宽度,形成了1:2:1的局面 */
+}
+
+.products .box-container .box .image .icons a:hover{
+	background: #333333;
+}
+
+.products .box-container .box .content{
+	padding: 2rem;
+	text-align: center;
+}
+
+.products .box-container .box .content h3{
+	font-size: 2.5rem;
+	color: #333333;
+}
+.products .box-container .box .content .price{
+	font-size: 2.5rem;
+	color: var(--pink);
+	font-weight: bolder;
+	padding-top: 1rem;
+}
+
+.products .box-container .box .content .price span{
+	font-size: 1.5rem;
+	color: #999999;
+	font-weight: lighter;
+	text-decoration: line-through;
+	/* 加一条删除线 */
+}
+
+
+
+/* customer */
+.review .box-container{
+	display: flex;
+	/* 让子元素box平均分配box-container的宽度,会主动拆p的行,
+	使得容得下三个box */
+
+	flex-wrap: wrap;
+	/* 则不会强行把p折断,而是换行,除非你控制了box的宽度??? 
+	例如.review .box-container .box{flex: 1 1 30rem;} */
+	/* 不能忘 ,否则就不是自适应布局了!!!否则缩小网页时,div不会拆行*/
+	gap:1.5rem;
+	/* 使每个div之间有一条空袭 */
+}
+
+.review .box-container .box{
+	flex: 1 1 30rem;
+	border: .1rem solid rgba(0,0,0,.1);
+	border-radius: .5rem;
+	box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+	/* box-shadow 不用写逗号,且不能 0 0 0 rgba(0,0,0,.1)<===这样没有效果 */
+	padding: 3rem 2rem;
+	position: relative;
+}
+
+.review .box-container .box .fa-quote-right{
+	position: absolute;
+	right: 3rem;
+	bottom: 3rem;
+	color: #eee;
+	font-size: 6rem;
+	
+}
+.review .box-container .box .stars i{
+	color: var(--pink);
+	font-size: 2rem;
+	
+}
+
+.review .box-container .box p{
+	color: #999999;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	/* 行高为font-size的1.5倍*/
+	padding-top: 2rem;
+	/* 发现:都是设padding-top,而不是padding-bottom */
+}
+
+.review .box-container .box .user{
+	display: flex;
+	align-items: center;
+	padding-top: 2rem;
+	/* 避免太挤 */
+	
+}
+
+.review .box-container .box .user img{
+	border-radius: 50%;
+	height: 6rem;
+	width: 6rem;
+	object-fit: cover;
+	margin-right: 1rem;
+	/* 这时候就不要设padding-right了 */
+}
+
+.review .box-container .box .user .user-info h3{
+	font-size: 2rem;
+	color: #333333;
+}
+
+.review .box-container .box .user .user-info span{
+	font-size: 1.5rem;
+	color: #999;
+}
+
+/* 写完 customer部分,就写它的media queries */
+
+/*  */
+.contact .row{
+	display: flex;
+	/* 导致form和img同样高度? */
+	/* flex-wrap: wrap; */
+	/* 此处如果折行,图片会在form下方,为了让图片在上方,↓ */
+	flex-wrap: wrap-reverse;
+	gap:1.5rem;
+	align-items: center;
+	/* 居中对齐.且不必form和img同样高度 */
+}
+
+.contact .row form{
+	flex: 1 1 40rem;
+	/* 用flex: 1 1 40rem; 替代 width:50%; */
+	padding: 2rem 2.5rem;
+	box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+	border: .1rem solid rgba(0,0,0,.1);
+	background: #FFFFFF;
+	border-radius: .5rem;
+}
+
+.contact .row form .box{
+	/* 用 .box,而不用input选择器,因为可以同时选中<textarea>,
+	 而不选中input:submit*/
+	padding: 1rem;
+	 /* 撑开,避免border连着input */
+	font-size: 1.7rem;
+	/* 字体变大,如果水平位置不够,第二个input会被第一个挤到第二行去 */
+	color: #333333;
+	text-transform: none;
+	/* 取消开头字母大写,避免用户输入name时,也自动大写了 */
+	border: .1rem solid rgba(0,0,0,.1);
+	border-radius: .5rem;
+	margin: .7rem 0;
+	width: 100%;
+	/* 让每个input换行 */
+	/* 用padding还是margin,设想一下假如加了border,需不需要避免border粘着内部内容?
+	 需不需要让几个容器分开点,避免太挤?*/
+}
+
+.contact .row form .box:focus{
+	/* 聚焦会发生什么动态变化呢? */
+	border-color: var(--pink);
+}
+
+.contact .row form textarea{
+	height: 15rem;
+	/* 规定文本框大小 */
+	resize: none;
+	/* 用户不可以调文本框大小 */
+}
+
+.contact .row .image{
+	flex: 1 1 40rem;
+}
+.contact .row .image img{
+	width: 100%;
+}
+
+
+/* footer */
+
+.footer .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	gap:1.5rem;
+}
+
+.footer .box-container .box{
+	flex: 1 1 25rem;
+	/* border: .1rem solid #333333; */
+}
+
+.footer .box-container .box h3{
+	font-size: 2.5rem;
+	color: #333333;
+	padding: 1rem 0;
+}
+
+
+.footer .box-container .box a{
+	display: block;
+	/* 让a都成为block,每个a占一行 */
+	color: #666;
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+	color: var(--pink);
+	text-decoration: underline;
+}
+
+.footer .box-container .box  img{
+	margin-top: 1rem;
+}
+
+.footer .credit{
+	border-top:.1rem solid rgba(0,0,0,.1);
+	text-align: center;
+	font-size: 2rem;
+	color: #333333;
+	padding: 2.5rem;
+	/* 此padding决定字体与border-top的距离 */
+	margin-top: 2.5rem;
+	/* 此margin决定border与box-container的距离 */
+	/* 取相等的值，使得border上下看起来对称 */
+}
+
+.footer .credit span{
+	color: var(--pink);
+}
+
+
+
+/* 写完header，就先写header的媒体查询 */
+/* 从小到991px */
+@media (max-width:991px) {
+	html{
+		font-size: 55%;
+	}
+	header{
+		padding: 2rem;
+	}
+	
+	/* ② */
+	section{
+		padding: 2rem;
+		/* padding: 2rem 9%;原本左右为9%。现在则上下仍然是2rem，左右也变为2rem */
+	}
+	.home{
+		background-position: left;
+		/* 让背景左移一点 */
+	}
+}
+
+/* 从小到768px */
+@media (max-width:768px) {
+	header .fa-bars{
+		display: block;
+		/* 展示fa-bars */
+	}
+	header .navbar{
+		position: absolute;
+		/* 仍处于脱离文档流状态 */
+		/* top: 0; */
+		top: 100%;
+		/* 则navbar位于父元素正下方，与父元素不重叠 */
+		left: 0;
+		right: 0;
+		background: #eee;
+		border-top: .1rem solid rgba(0,0,0,.1);
+		/* 因为font-size: 62.5%;所以  .1rem =1px */
+		clip-path: polygon(0 0,100% 0,100% 0,0 0);
+		/* clip-path 简单的工作原理是提供一系列的X和Y值来创建路径。
+		当使用这些值创建一条完整路径时，就会把图像按照路径内部的尺寸进行裁剪。
+		利用clip-path，我们可以创建圆形、椭圆和多边形等不同的形状，创造力是唯一的限制。 
+		clip-path: polygon(0 0,100% 0,100% 50%,0 50%);  例如，这样只裁剪nav的下半截
+		clip-path: polygon(0 0,100% 0,100% 100%,0 100%);  这样则全部留下，没被裁剪
+		clip-path: polygon(0 0,100% 0,100% 60%,0 60%);  则留下的比50%时候多
+		说明，clip-path绘制出来的区域，就是把一个block自上而下留下的区域
+		clip-path: polygon(0 0,100% 0,100% 0,0 0);  这样则留下的区域为一条线*/
+	}
+	
+	header #toggler:checked ~ .navbar{
+		clip-path:polygon(0 0,100% 0,100% 100%,0 100%) ;
+		/* 这就是为什么要创建一个checkbox，并且隐藏
+		 因为这样可以通过点击label来确定是否为checked，而不是用户手动点击checkbox
+		 点击为checked，展示nav面板*/
+	}
+	header .navbar a{
+		margin: 1.5rem;
+		padding: 1.5rem;
+		background: #fff;
+		border: .1rem solid rgba(0,0,0,.1);
+		display: block;
+		/* 使每个nav的a都各成一行 */
+	}
+	
+	/* ②二 */
+	.home .content h3{
+		font-size: 5rem;
+		/* 原本为font-size: 6rem; */
+	}
+	.home .content span{
+		font-size: 2.5rem;
+		/* 原本为font-size: 3.5rem; */
+	}
+	.icons-container .icons h3{
+
+		font-size: 2rem;
+		/* 放大,由1.5放大到2rem */
+	}
+	
+	.icons-container .icons span{
+		font-size: 1.7rem;
+		/* 由1.3rem放大到1.7rem */
+	}
+	
+}
+
+
+/* 从小到450px */
+@media (max-width:450px) {
+	html{
+		font-size: 50%;
+	}
+	/* 继承到768px的  展示/隐藏  nav面板 */
+	.heading{
+		font-size: 3rem;
+		/* font-size: 4rem;原本是4rem */
+	}
+}
